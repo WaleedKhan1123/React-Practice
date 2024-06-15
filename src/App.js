@@ -7,6 +7,12 @@ function MyButton() {
     </button>
   );
 }
+
+const User= {
+ name: 'Waleed',
+ reg: 'SP21-BSE-006'
+}
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +23,8 @@ function App() {
           
         </h1>
         <MyButton/>
-      
+       <h1>{User.name}</h1>
+       <h1>{User.reg}</h1>
     </div>
   );
 }
