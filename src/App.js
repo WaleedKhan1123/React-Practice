@@ -1,23 +1,24 @@
 import "./styles/style.css";
 import { useState } from "react";
-
+function MyButton({count ,onClick}) {
+    
+ 
+  return (
+   
+    <button onClick={onClick} >
+      
+      I'm a button
+      {count}
+    </button>
+  );
+}
 function App() {
-
+  const [counter, setCounter]= useState(0);
   
-  function MyButton() {
-    const [counter, setCounter]= useState(0);
-    function clicked (){
-      setCounter( counter+1); 
-     }
-    return (
-     
-      <button onClick={clicked}>
-        
-        I'm a button
-        {counter}
-      </button>
-    );
-  }
+  
+  function clicked (){
+    setCounter( counter+1); 
+   }
  
   const User= {
    name: 'Waleed',
@@ -48,8 +49,8 @@ function App() {
           Welcome to react practice
           
         </h1>
-        <MyButton  />
-        <MyButton  />
+        <MyButton count={counter} onClick = {clicked}/>
+        <MyButton count={counter} onClick = {clicked} />
        <h1>{User.name}</h1>
        <h1>{User.reg}</h1>
 
