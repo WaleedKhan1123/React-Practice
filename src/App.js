@@ -1,5 +1,7 @@
 import "./styles/style.css";
 import { useState } from "react";
+import "./Component/TickTackToe"
+import Square from "./Component/TickTackToe";
 function MyButton({count ,onClick}) {
     
  
@@ -64,7 +66,7 @@ function App() {
           </li>
         )}
        </ul>
-       
+       <Square/>
     </div>
   );
 }
