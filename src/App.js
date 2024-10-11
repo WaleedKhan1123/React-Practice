@@ -3,14 +3,16 @@ import { useState } from "react";
 import "./Component/TickTackToe"
 import Square from "./Component/TickTackToe";
 function MyButton({count ,onClick}) {
-    
- 
+  const [counter, setCounter] = useState(0)
+  function click(){
+    setCounter(counter+1)
+  }
   return (
    
-    <button onClick={onClick} >
+    <button onClick={click} >
       
-      I'm a button
-      {count}
+      I'm a button 
+      {counter}
     </button>
   );
 }
