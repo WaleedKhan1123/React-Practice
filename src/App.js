@@ -1,28 +1,79 @@
-//practice for Writing Markup with JSX
+import "./styles/style.css";
 
-export default function Bio() {
+
+
+
+//JavaScript in JSX with Curly Braces
+
+
+const baseUrl = 'https://i.imgur.com/';
+const person = {
+  name: 'Gregorio Y. Zara',
+  imageId: '7vQD0fP',
+  imageSize: 's',
+  theme: {
+    backgroundColor: 'black',
+    color: 'pink'
+  }
+};
+
+ function TodoList() {
   return (
     <>
-    <div class="intro">
-      <h1>Welcome to my website!</h1>
+    <div style={person.theme}>
+      <h1>{person.name}'s Todos</h1>
+      <img
+        className="avatar"
+        src = {baseUrl+person.imageId+person.imageSize+'.jpg'}
+        alt={person.name}
+      />
+      <ul>
+        <li>Improve the videophone</li>
+        <li>Prepare aeronautics lectures</li>
+        <li>Work on the alcohol-fuelled engine</li>
+      </ul>
     </div>
-    <p class="summary">
-      You can find my thoughts here.
-      <br/>
-      <br/>
-      <b>
-        And <i>pictures</i></b> of scientists!
-    </p>
     </>
   );
 }
 
 
 
+export default function App(){
+
+  return(<>
+  <TodoList/>
+  </>)
+}
+
+
+
+
+//practice for Writing Markup with JSX
+
+// export default function Bio() {
+//   return (
+//     <>
+//     <div className="intro">
+//       <h1>Welcome to my website!</h1>
+//     </div>
+//     <p className="summary">
+//       You can find my thoughts here.
+//       <br/>
+//       <br/>
+//       <b>
+//         And <i>pictures</i></b> of scientists!
+//     </p>
+//     </>
+//   );
+// }
+
+
+
 
 // practice for importing and exporting components
 
-// import "./styles/style.css";
+
 // import Gallery from "./Practice/importing and exporting components/Gallery";
 // import Profile from "./Practice/importing and exporting components/Profile";
 
