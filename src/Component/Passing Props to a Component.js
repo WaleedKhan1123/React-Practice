@@ -46,35 +46,84 @@
 
 
 
-function getImageUrl(person, size) {
-  return (
-    'https://i.imgur.com/' +
-    person.imageId +
-    size +
-    '.jpg'
-  );
-}
+// function getImageUrl(person, size) {
+//   return (
+//     'https://i.imgur.com/' +
+//     person.imageId +
+//     size +
+//     '.jpg'
+//   );
+// }
 
-function Avatar({ person, size }) {
-  return (
-    <img
-      className="avatar"
-      src={getImageUrl(person, 'b')}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
-  );
-}
+// function Avatar({ person, size }) {
+//   let siz;
+//   if (size<90) {
+//      siz = 's'
+//   }
+//   else{
+//     siz = 'b'
+//   }
+//   return (
+//     <img
+//       className="avatar"
+//       src={getImageUrl(person, siz)}
+//       alt={person.name}
+//       width={size}
+//       height={size}
+//     />
+//   );
+// }
+
+// export default function Profile() {
+//   return (
+//     <Avatar
+//       size={100}
+//       person={{ 
+//         name: 'Gregorio Y. Zara', 
+//         imageId: '7vQD0fP'
+//       }}
+//     />
+//   );
+// }
+
+
+
 
 export default function Profile() {
   return (
-    <Avatar
-      size={40}
-      person={{ 
-        name: 'Gregorio Y. Zara', 
-        imageId: '7vQD0fP'
-      }}
-    />
+    <div>
+      
+        
+        <Card>
+          <h1>Photo</h1>
+          <img
+            className="avatar"
+            src="https://i.imgur.com/OKS67lhm.jpg"
+            alt="Aklilu Lemma"
+            width={70}
+            height={70}
+          />
+          </Card>
+        
+      
+        <Card>
+          <h1>About</h1>
+          <p>Aklilu Lemma was a distinguished Ethiopian scient  ist who discovered a natural treatment to schistosomiasis.</p>
+          </Card>
+        
+      
+    </div>
+  );
+}
+
+
+function Card({ children }) {
+  return (
+    <div className="card">
+        <div className="card-content">
+    
+      {children}
+      </div>
+    </div>
   );
 }
