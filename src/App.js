@@ -1,13 +1,13 @@
 import "./styles/style.css";
 // import TodoList from "./Component/JavaScript in JSX with curly Braces";
 
-import Gallery from "./Component/Passing Props to a Component";
-
+// import Gallery from "./Component/Passing Props to a Component";
+import PackingList from "./Component/Conditional Rendering";
 
 export default function App(){
 
   return(<>
-  <Gallery/>
+  <PackingList/>
   </>)
 }
 
