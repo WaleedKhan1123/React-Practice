@@ -1,81 +1,118 @@
- const people = [{
-  id: 0,
-  name: 'Creola Katherine Johnson',
-  profession: 'mathematician',
-  accomplishment: 'spaceflight calculations',
-  imageId: 'MK3eW3A'
+
+ const recipes = [{
+  id: 'greek-salad',
+  name: 'Greek Salad',
+  ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
 }, {
-  id: 1,
-  name: 'Mario José Molina-Pasquel Henríquez',
-  profession: 'chemist',
-  accomplishment: 'discovery of Arctic ozone hole',
-  imageId: 'mynHUSa'
+  id: 'hawaiian-pizza',
+  name: 'Hawaiian Pizza',
+  ingredients: ['pizza crust', 'pizza sauce', 'mozzarella', 'ham', 'pineapple']
 }, {
-  id: 2,
-  name: 'Mohammad Abdus Salam',
-  profession: 'physicist',
-  accomplishment: 'electromagnetism theory',
-  imageId: 'bE7W1ji'
-}, {
-  id: 3,
-  name: 'Percy Lavon Julian',
-  profession: 'chemist',
-  accomplishment: 'pioneering cortisone drugs, steroids and birth control pills',
-  imageId: 'IOjWm71'
-}, {
-  id: 4,
-  name: 'Subrahmanyan Chandrasekhar',
-  profession: 'astrophysicist',
-  accomplishment: 'white dwarf star mass calculations',
-  imageId: 'lrWQx8l'
+  id: 'hummus',
+  name: 'Hummus',
+  ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
 }];
 
-function getImageUrl(person) {
+
+export default function RecipeList() {
+  
+  const list = recipes.map(recip => {
+   return( <div key={recip.id}>
+       <h1>{recip.id}</h1>
+       <ul>
+       {recip.ingredients.map(reci =>
+        <li> {reci}</li>
+       )} </ul>    
+    </div>)
+  })
   return (
-    'https://i.imgur.com/' +
-    person.imageId +
-    's.jpg'
+    <div>
+      <h1>Recipes</h1>
+      {list}
+    </div>
   );
 }
 
-export default function List() {
-  const chemist  = people.filter(people => people.profession==='chemist')
-  const other  = people.filter(people => people.profession!=='chemist')
-  const listchemist = chemist.map(person =>
-    <li key={person.id}>
-      <img
-        src={getImageUrl(person)}
-        alt={person.name}
-      />
-      <p>
-        <b>{person.name}:</b>
-        {' ' + person.profession + ' '}
-        known for {person.accomplishment}
-      </p>
-    </li>
-  );
-  const everyOne = other.map(person =>
-    <li key={person.id}>
-      <img
-        src={getImageUrl(person)}
-        alt={person.name}
-      />
-      <p>
-        <b>{person.name}:</b>
-        {' ' + person.profession + ' '}
-        known for {person.accomplishment}
-      </p>
-    </li>
-  );
-  return (
-    <article>
-      <h1>Chemist</h1>
-      <ul>{listchemist}</ul>
-      <h1>EveryOne Else</h1>
-      <ul>{everyOne}</ul>
-    </article>
-  );
-}
+
+
+//  const people = [{
+//   id: 0,
+//   name: 'Creola Katherine Johnson',
+//   profession: 'mathematician',
+//   accomplishment: 'spaceflight calculations',
+//   imageId: 'MK3eW3A'
+// }, {
+//   id: 1,
+//   name: 'Mario José Molina-Pasquel Henríquez',
+//   profession: 'chemist',
+//   accomplishment: 'discovery of Arctic ozone hole',
+//   imageId: 'mynHUSa'
+// }, {
+//   id: 2,
+//   name: 'Mohammad Abdus Salam',
+//   profession: 'physicist',
+//   accomplishment: 'electromagnetism theory',
+//   imageId: 'bE7W1ji'
+// }, {
+//   id: 3,
+//   name: 'Percy Lavon Julian',
+//   profession: 'chemist',
+//   accomplishment: 'pioneering cortisone drugs, steroids and birth control pills',
+//   imageId: 'IOjWm71'
+// }, {
+//   id: 4,
+//   name: 'Subrahmanyan Chandrasekhar',
+//   profession: 'astrophysicist',
+//   accomplishment: 'white dwarf star mass calculations',
+//   imageId: 'lrWQx8l'
+// }];
+
+// function getImageUrl(person) {
+//   return (
+//     'https://i.imgur.com/' +
+//     person.imageId +
+//     's.jpg'
+//   );
+// }
+
+// export default function List() {
+//   const chemist  = people.filter(people => people.profession==='chemist')
+//   const other  = people.filter(people => people.profession!=='chemist')
+//   const listchemist = chemist.map(person =>
+//     <li key={person.id}>
+//       <img
+//         src={getImageUrl(person)}
+//         alt={person.name}
+//       />
+//       <p>
+//         <b>{person.name}:</b>
+//         {' ' + person.profession + ' '}
+//         known for {person.accomplishment}
+//       </p>
+//     </li>
+//   );
+//   const everyOne = other.map(person =>
+//     <li key={person.id}>
+//       <img
+//         src={getImageUrl(person)}
+//         alt={person.name}
+//       />
+//       <p>
+//         <b>{person.name}:</b>
+//         {' ' + person.profession + ' '}
+//         known for {person.accomplishment}
+//       </p>
+//     </li>
+//   );
+//   return (
+//     <article>
+//       <h1>Chemist</h1>
+//       <ul>{listchemist}</ul>
+//       <h1>EveryOne Else</h1>
+//       <ul>{everyOne}</ul>
+//     </article>
+//   );
+// }
 
 
 
