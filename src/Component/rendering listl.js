@@ -1,37 +1,64 @@
+const poem = {
+  lines: [
+    'I write, erase, rewrite',
+    'Erase again, and then',
+    'A poppy blooms.'
+  ]
+};
 
- const recipes = [{
-  id: 'greek-salad',
-  name: 'Greek Salad',
-  ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
-}, {
-  id: 'hawaiian-pizza',
-  name: 'Hawaiian Pizza',
-  ingredients: ['pizza crust', 'pizza sauce', 'mozzarella', 'ham', 'pineapple']
-}, {
-  id: 'hummus',
-  name: 'Hummus',
-  ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
-}];
-
-
-export default function RecipeList() {
-  
-  const list = recipes.map(recip => {
-   return( <div key={recip.id}>
-       <h1>{recip.id}</h1>
-       <ul>
-       {recip.ingredients.map(reci =>
-        <li> {reci}</li>
-       )} </ul>    
-    </div>)
-  })
+export default function Poem() {
   return (
-    <div>
-      <h1>Recipes</h1>
-      {list}
-    </div>
+    <article>
+      {poem.lines.map((line, index) =>
+        <p key={index}>
+          {line}
+        </p>
+      )}
+    </article>
   );
 }
+
+
+
+
+//  const recipes = [{
+//   id: 'greek-salad',
+//   name: 'Greek Salad',
+//   ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
+// }, {
+//   id: 'hawaiian-pizza',
+//   name: 'Hawaiian Pizza',
+//   ingredients: ['pizza crust', 'pizza sauce', 'mozzarella', 'ham', 'pineapple']
+// }, {
+//   id: 'hummus',
+//   name: 'Hummus',
+//   ingredients: ['chickpeas', 'olive oil', 'garlic cloves', 'lemon', 'tahini']
+// }];
+
+// function List(props){
+
+//   return(
+//     <ul>
+//     {props.lis.map(reci =>
+//      <li> {reci}</li>
+//     )} </ul>  
+//   )
+// }
+// export default function RecipeList() {
+  
+//   const list = recipes.map(recip => {
+//    return( <div key={recip.id}>
+//        <h1>{recip.id}</h1>
+//          <List lis= {recip.ingredients}/>
+//     </div>)
+//   })
+//   return (
+//     <div>
+//       <h1>Recipes</h1>
+//       {list}
+//     </div>
+//   );
+// }
 
 
 
