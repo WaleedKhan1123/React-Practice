@@ -3,11 +3,12 @@ import "./styles/style.css";
 
 // import Gallery from "./Component/Passing Props to a Component";
 // import PackingList from "./Component/Conditional Rendering";
-import List from "./Component/rendering listl";
+// import List from "./Component/rendering listl";
+import TeaSet from "./Component/keeping components pure";
 export default function App(){
 
   return(<>
-  <List/>
+  <TeaSet/>
   </>)
 }
 
