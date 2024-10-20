@@ -2,7 +2,6 @@ let guest = 0;
 
 function Cup() {
   // Bad: changing a preexisting variable!
-  console.log("this is guest"+guest)
   guest = guest + 1;
   return <h2>Tea cup for guest #{guest}</h2>;
 }
