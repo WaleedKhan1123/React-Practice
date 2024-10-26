@@ -3,20 +3,29 @@ function ResToEvents() {
 
   // Arrow function
   const greet =function greet(name) {
-    return `Hello, ${name}`;
+    console.log("My name is jeff")
   }
    
-  
+  function recursion(num){
+
+    if (num===1){
+      return 1
+    }
+    return num*recursion(num-1);
+  }
   
 //   (name) => `Hello, ${name}`;
   
     return (<div>
-        <button onClick={function handleclick() {
-        console.log("function called")
-    }}>
+        <button onClick={greet}>
       I don't do anything
     </button>
-    {greet}
+    <br/>
+    <br/>
+    <br/>
+    {
+      recursion(21)
+    }
     </div>  );
 }
 
