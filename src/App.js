@@ -6,11 +6,12 @@ import "./styles/style.css";
 // import List from "./Component/rendering listl";
 // import TeaSet from "./Component/keeping components pure";
 // import Clock from "./Component/keeping components pure";
-import ResToEvents from "./Component/Responding to Events";
+// import ResToEvents from "./Component/Responding to Events";
+import Toolbar from "./Component/Responding to Events";
 export default function App(){
 
   return(<>
-  <ResToEvents/>
+  <Toolbar/>
     </>)
 }
 
