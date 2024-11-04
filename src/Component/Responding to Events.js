@@ -1,32 +1,35 @@
-export default function Toolbar() {
-  return (
-    <Toolbars
-      onPlayMovie={() => alert('Playing!')}
-      onUploadImage={() => alert('Uploading!')}
-    />
-  );
-}
 
-function Toolbars({ onPlayMovie, onUploadImage }) {
-  return (
-    <div>
-      <Button onClick={onPlayMovie}>
-        Play Movie
-      </Button>
-      <Button onClick={onUploadImage}>
-        Upload Image
-      </Button>
-    </div>
-  );
-}
 
-function Button({ onClick, children }) {
-  return (
-    <button onClick={onClick}>
-      {children}
-    </button>
-  );
-}
+
+// export default function Toolbar() {
+//   return (
+//     <Toolbars
+//       onPlayMovie={() => alert('Playing!')}
+//       onUploadImage={() => alert('Uploading!')}
+//     />
+//   );
+// }
+
+// function Toolbars({ onPlayMovie, onUploadImage }) {
+//   return (
+//     <div>
+//       <Button onClick={onPlayMovie}>
+//         Play Movie
+//       </Button>
+//       <Button onClick={onUploadImage}>
+//         Upload Image
+//       </Button>
+//     </div>
+//   );
+// }
+
+// function Button({ onClick, children }) {
+//   return (
+//     <button onClick={onClick}>
+//       {children}
+//     </button>
+//   );
+// }
 
 
 // function Button({ onSmash, children }) {
