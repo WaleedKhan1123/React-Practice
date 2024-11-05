@@ -8,11 +8,12 @@ import "./styles/style.css";
 // import Clock from "./Component/keeping components pure";
 // import ResToEvents from "./Component/Responding to Events";
 // import Toolbar from "./Component/Responding to Events";
-import LightSwitch from "./Component/Responding to Events";
+// import LightSwitch from "./Component/Responding to Events";
+import ColorSwitch from "./Component/Responding to Events";
 export default function App(){
 
   return(<>
-  <LightSwitch/>
+  <ColorSwitch/>
     </>)
 }
 
