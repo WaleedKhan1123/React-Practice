@@ -8,11 +8,11 @@ import "./styles/style.css";
 // import Clock from "./Component/keeping components pure";
 // import ResToEvents from "./Component/Responding to Events";
 // import Toolbar from "./Component/Responding to Events";
-import Form from "./Component/State A Component's Memory";
+import FeedbackForm from "./Component/State A Component's Memory";
 export default function App(){
 
   return(<>
-  <Form/>  
+  <FeedbackForm/>  
     </>)
 }
 
