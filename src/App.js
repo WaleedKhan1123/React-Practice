@@ -8,11 +8,12 @@ import "./styles/style.css";
 // import Clock from "./Component/keeping components pure";
 // import ResToEvents from "./Component/Responding to Events";
 // import Toolbar from "./Component/Responding to Events";
-import FeedbackForm from "./Component/State A Component's Memory";
+// import FeedbackForm from "./Component/State A Component's Memory";
+import TrafficLight from "./Component/State as a Snapshot";
 export default function App(){
 
   return(<>
-  <FeedbackForm/>  
+   <TrafficLight/>
     </>)
 }
 
