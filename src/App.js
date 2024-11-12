@@ -9,11 +9,12 @@ import "./styles/style.css";
 // import ResToEvents from "./Component/Responding to Events";
 // import Toolbar from "./Component/Responding to Events";
 // import FeedbackForm from "./Component/State A Component's Memory";
-import TrafficLight from "./Component/State as a Snapshot";
+// import TrafficLight from "./Component/State as a Snapshot";
+import BootPractice from "./Component/Bootstrap";
 export default function App(){
 
   return(<>
-   <TrafficLight/>
+    <BootPractice/>
     </>)
 }
 
