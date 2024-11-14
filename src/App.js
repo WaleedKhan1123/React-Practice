@@ -11,11 +11,12 @@ import "./styles/style.css";
 // import FeedbackForm from "./Component/State A Component's Memory";
 // import TrafficLight from "./Component/State as a Snapshot";
 // import BootPractice from "./Component/Bootstrap";
-import RequestTracker from "./Component/Queueing a Series of State Updates";
+// import RequestTracker from "./Component/Queueing a Series of State Updates";
+import Apps from "./Component/Queueing a Series of State Updates";
 export default function App(){
 
   return(<>
-    <RequestTracker/>
+    <Apps/>
     </>)
 }
 
