@@ -10,11 +10,12 @@ import "./styles/style.css";
 // import Toolbar from "./Component/Responding to Events";
 // import FeedbackForm from "./Component/State A Component's Memory";
 // import TrafficLight from "./Component/State as a Snapshot";
-import BootPractice from "./Component/Bootstrap";
+// import BootPractice from "./Component/Bootstrap";
+import RequestTracker from "./Component/Queueing a Series of State Updates";
 export default function App(){
 
   return(<>
-    <BootPractice/>
+    <RequestTracker/>
     </>)
 }
 
